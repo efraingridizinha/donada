@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Tia Ingrid</title>
+    <!-- Fonte que imita escrita à mão -->
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #ffb6c1;
+            --dark-pink: #ff69b4;
+            --lilac: #dda0dd;
+            --dark-lilac: #8a2be2;
+            --paper: #fdfdfd;
+            --line: #f0c8d0;
+            --margin-line: #d8a0d8;
+            --text-color: #4a2c4a;
+        }
+        body {
+            /* Fundo gradiente com a paleta rosa e lilás */
+            background: linear-gradient(135deg, var(--pink), var(--lilac));
+            font-family: 'Patrick Hand', cursive, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            color: var(--text-color);
+        }
+        .notebook {
+            background-color: var(--paper);
+            width: 100%;
+            max-width: 650px;
+            min-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+            padding: 40px 40px 40px 60px;
+            /* Efeito das linhas do caderno */
+            background-image: repeating-linear-gradient(var(--paper) 0px, var(--paper) 29px, var(--line) 30px);
+            background-attachment: local;
+            line-height: 30px;
+            font-size: 20px;
+            overflow: hidden;
+        }
+        /* Margem vertical do caderno */
+        .notebook::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 40px;
+            width: 2px;
+            background-color: var(--margin-line);
+            z-index: 1;
+        }
+        .page {
+            position: relative;
+            z-index: 2;
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .photo-container {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: transparent;
+        }
+        /* Estilização para as fotos parecerem polaroids */
+        .photo-container img {
+            max-width: 100%;
+            max-height: 300px;
+            height: auto;
+            border: 8px solid white;
+            border-bottom: 25px solid white;
+            border-radius: 2px;
+            box-shadow: 2px 4px 10px rgba(0,0,0,0.15);
+            transform: rotate(-2deg);
+            transition: transform 0.3s;
+            object-fit: cover;
+        }
+        .photo-container img:hover {
+            transform: rotate(1deg) scale(1.02);
+        }
+        p {
+            margin: 0 0 15px 0;
+            margin-top: 5px;
+        }
+        .btn-container {
+            text-align: right;
+            margin-top: 30px;
+            padding: 10px 0;
+            background-color: transparent;
+        }
+        button {
+            background-color: var(--dark-pink);
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-size: 18px;
+            font-family: inherit;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: var(--dark-lilac);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="notebook">
+    <!-- PÁGINA 1: Em Português -->
+    <div id="page1" class="page active">
+        <div class="photo-container">
+            <!-- Substitua o link abaixo pela sua Foto 01 -->
+            <img src="img01.jpg" alt="Foto 01" id="img01">
+        </div>
+        
+        <p>Devido à correria do dia a dia, como já falei p' ocê uma outra ou umas outras vezes kkkkkk, acaba que eu não me declaro tanto p' ocê....</p>
+        <p>E se tem algo em que eu era péssimo, era externalizar meus sentimentos por alguém...</p>
+        <p>Buuuttt, a mulher da minha vida, o amor da minha vida, permitiu que essa frieza e falta de demonstração de carinho acabassem!!</p>
+        <p>E eu me sinto muiitooo, mas muiiiitooo bem e alegre em escrever tudo o que eu sinto por vc, minha mulher!!</p>
+        
+        <p>Eu queria começar lembrando da pessoa incrível que és!!</p>
+        
+        <p>Uma mulher incrível que cada palavra que cê fala ou escreve p' mim me acalma...</p>
+        <p>Posso estar agitado como for ou bem preocupado, posso estar feliz ou triste, as suas palavras escritas e faladas sempre me colocam p' cima e me fazem bem!!</p>
+        
+        <p>Seu abraço me conforta... como é bom estar agarradinho com vc!!</p>
+        
+        <p>Seu beijo me leva p' outra dimensão...<br>E eu me perco por completo no seu olhar!!</p>
+        
+        <p>Eu te amooooo muuuuuiiiiiiitoooooo, minha mulher!!<br>Te amooo demaaiiss, minha Ingridizinhaaa!<br>Minha Mourinha, sou todinho seu bb, te amoo!!</p>
+        
+        <p>Ah, eu não podia esquecer!</p>
+        <p>Minha vida, somos humanos e erramos. Vai acontecer, como já ocorreu, de eu falhar em vários aspectos. Buuutttt, eu estou aqui para melhorar a cada dia e não ficar no erro. Além disso, quando ocê tb achar que falhou p' comigo, não se preocupe, eu continuarei amando vc iguaaaallll!!</p>
+        <p>Aliás, todas as vezes que eu acabo entristecendo vc ou vc acha que me entristeceu, o nosso amor fica ainda mais fortalecido e o nosso companheirismo cresce ainda mais, meu amor!!</p>
+        <p>As vezes eu sou meio inseguro e acho que entristeci. Ja percebi que ocê tb é. E que coisa maravilhosa termos as mesmas maniaaass. As vezes eu vou pensar que entristeci ocê e no fim nao entristeci e vc vai pensar que me entristeceu e nao me entristeceu.</p>
+        <p>Eu te amoo muuiitooo!!</p>
+
+        <div class="btn-container">
+            <button onclick="nextPage()">Next &rarr;</button>
+        </div>
+    </div>
+
+    <!-- PÁGINA 2: Em Inglês -->
+    <div id="page2" class="page">
+        <div class="photo-container">
+            <!-- Substitua o link abaixo pela sua Foto 02 -->
+            <img src="img02.jpg" alt="Foto 02" id="img02">
+        </div>
+        
+        <p>Aaaaaaaaa...<br>I couldn't forget!!</p>
+        <p>Happy Teacher's Day to the best teacheeeeer and pedagoooogueeee that exisssstsss on the faceee of the earrrttthhhhh!!</p>
+        <p>Happy your day, my life!!</p>
+        <p>May you continue being the teacher that your students love so much!</p>
+        <p>May you continue dedicating yourself to teaching your students, and I am sure that many fruits will be harvested in the future, where you will be proud to have been their teacher and see them become a doctor, lawyer, teacher, and etc.!</p>
+        <p>May you continue delivering the content the way it needs to be delivered, and also in playful and competitive ways (like the dictation), because it encourages them to learn and study more at home.</p>
+        <p>May God continue blessing you, giving you wisdom and strategy in the classroom!</p>
+        <p>I love yooouuu, teacher Ingrid!!<br>Happy your daaaaayyy, best pedagogue in this universsseeeeee!!!</p>
+
+        <div class="btn-container">
+            <button onclick="prevPage()">&larr; Back</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Funções para mudar de página
+    function nextPage() {
+        document.getElementById('page1').classList.remove('active');
+        document.getElementById('page2').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Sobe a tela para o topo
+    }
+    function prevPage() {
+        document.getElementById('page2').classList.remove('active');
+        document.getElementById('page1').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>
